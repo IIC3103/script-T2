@@ -618,7 +618,7 @@ const solver = async () => {
             requestSheet.getCell('F'+requestIndex).value = instance[3][3][j]
         }
     }
-    resultExcel.xlsx.writeFile('results1.xlsx').then(()=>{
+    resultExcel.xlsx.writeFile('results.xlsx').then(()=>{
         console.log('Tareas revisadas :)')
     }).catch((e)=>{
         console.error('No se pueden crea excel')
