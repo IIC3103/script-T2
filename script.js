@@ -458,9 +458,10 @@ const solver = async () => {
                 option7) 
         }
         if(req7){
+            const uriSpecificNewsComment = urls[key]+(req7.headers['Location']||req7.headers['location']||'forceError')+'/comments'
             const option71 = {
                 headers: {'content-type' : 'application/json'},
-                uri:    urls[key]+'/news/'+req7.headers['Location']+'/comments',
+                uri: uriSpecificNewsComment,
                 resolveWithFullResponse: true,
                 body:{
                     "author": "Juan Pérez",
@@ -504,7 +505,7 @@ const solver = async () => {
             if(req71){
                 const option72 = {
                     headers: {'content-type' : 'application/json'},
-                    uri:    urls[key]+(req7.headers['Location']||req7.headers['location']||'forceError')+'/comments',
+                    uri: uriSpecificNewsComment,
                     resolveWithFullResponse: true,
                 }
                 r8t1 = formatRequestSimple(JSON.parse(req71.body),squema7)
