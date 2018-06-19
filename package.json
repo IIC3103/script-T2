@@ -1,0 +1,14 @@
+{
+  "name": "t2-script",
+  "version": "1.0.0",
+  "description": "Script correccion T2 2018-1 Taller de integracion",
+  "main": "script.js",
+  "repository": "https://github.com/IIC3103/script-T2",
+  "author": "Felipe Rojos <farojos@uc.cl>",
+  "license": "MIT",
+  "dependencies": {
+    "exceljs": "^1.4.12",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
+  }
+}
