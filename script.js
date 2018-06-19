@@ -246,7 +246,8 @@ const solver = async () => {
                 option2)
 
         }
-        let uriSpecificNews =  urls[key]+(req2.headers['Location']|| req2.headers['location'] || 'force-error-when-no-location')
+        let uriSpecificNews =  urls[key]
+        if(req2) uriSpecificNews+= (req2.headers['Location']|| req2.headers['location'] || 'force-error-when-no-location')
         const option3 = {
             headers: {'content-type' : 'application/json'},
             uri:     uriSpecificNews,
@@ -458,7 +459,7 @@ const solver = async () => {
                 option7) 
         }
         if(req7){
-            const uriSpecificNewsComment = urls[key]+(req7.headers['Location']||req7.headers['location']||'forceError')+'/comments'
+            let uriSpecificNewsComment = urls[key] +(req7.headers['Location']||req7.headers['location']||'forceError')+'/comments'
             const option71 = {
                 headers: {'content-type' : 'application/json'},
                 uri: uriSpecificNewsComment,
